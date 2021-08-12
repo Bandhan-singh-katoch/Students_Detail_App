@@ -1,4 +1,4 @@
-package com.example.student_listing_app.databse
+package com.example.student_listing_app.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
