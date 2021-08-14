@@ -9,5 +9,5 @@ data class Student(
     val id: Int,
     val name : String,
     val course : String,
-    val phoneNumber : Long
+    val rollNo : Int
 )

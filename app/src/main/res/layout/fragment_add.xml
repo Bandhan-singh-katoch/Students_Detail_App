@@ -33,13 +33,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editStudentName" />
 
     <EditText
-        android:id="@+id/editPhoneNo"
+        android:id="@+id/editRollNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="phone"
-        android:hint="@string/phone_no"
+        android:inputType="number"
+        android:hint="@string/roll_no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editCourseName" />
@@ -52,5 +52,5 @@
         android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPhoneNo" />
+        app:layout_constraintTop_toBottomOf="@+id/editRollNo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
