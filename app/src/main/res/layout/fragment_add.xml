@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/updateStudentName"
+        android:id="@+id/addStudentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/updateCourseName"
+        android:id="@+id/addCourseName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -30,10 +30,10 @@
         android:hint="@string/course"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateStudentName" />
+        app:layout_constraintTop_toBottomOf="@+id/addStudentName" />
 
     <EditText
-        android:id="@+id/updateRollNo"
+        android:id="@+id/addRollNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -42,15 +42,15 @@
         android:hint="@string/roll_no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateCourseName" />
+        app:layout_constraintTop_toBottomOf="@+id/addCourseName" />
 
     <Button
-        android:id="@+id/updateButton"
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateRollNo" />
+        app:layout_constraintTop_toBottomOf="@+id/addRollNo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

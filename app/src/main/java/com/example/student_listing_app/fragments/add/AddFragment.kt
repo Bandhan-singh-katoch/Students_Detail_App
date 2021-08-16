@@ -29,7 +29,7 @@ class AddFragment : Fragment() {
 
         mStudentViewModel = ViewModelProvider(this).get(StudentViewModel::class.java)
 
-        view.updateButton.setOnClickListener {
+        view.addButton.setOnClickListener {
             insertDataToDatabase()
         }
 
@@ -38,9 +38,9 @@ class AddFragment : Fragment() {
 
     private fun insertDataToDatabase() {
 
-        val name = updateStudentName.text.toString()
-        val course = updateCourseName.text.toString()
-        val rollNo = updateRollNo.text
+        val name = addStudentName.text.toString()
+        val course = addCourseName.text.toString()
+        val rollNo = addRollNo.text
 
         // if all details are not empty then run this block
         if(inputCheck(name,course,rollNo)){

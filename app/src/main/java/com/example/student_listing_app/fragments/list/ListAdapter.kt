@@ -3,6 +3,7 @@ package com.example.student_listing_app.fragments.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.student_listing_app.R
 import com.example.student_listing_app.model.Student
@@ -26,6 +27,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.name_txt.text = currentItem.name
         holder.itemView.course_txt.text = currentItem.course
         holder.itemView.rollno_txt.text = currentItem.rollNo.toString()
+
+        holder.itemView.rowLayout.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
 
 
     }
