@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class StudentViewModel(application: Application): AndroidViewModel(application) {
 
-    private val getAllData: LiveData<List<Student>>
+    val getAllData: LiveData<List<Student>>
     private val repository: StudentRepository
 
     init {
