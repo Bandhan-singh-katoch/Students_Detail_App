@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.student_listing_app.R
-import com.example.student_listing_app.data.StudentViewModel
+import com.example.student_listing_app.viewmodel.StudentViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 

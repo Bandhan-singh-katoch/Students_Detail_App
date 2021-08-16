@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.student_listing_app.R
-import com.example.student_listing_app.data.Student
-import com.example.student_listing_app.data.StudentViewModel
+import com.example.student_listing_app.model.Student
+import com.example.student_listing_app.viewmodel.StudentViewModel
 import kotlinx.android.synthetic.main.fragment_add.*
 import kotlinx.android.synthetic.main.fragment_add.view.*
 

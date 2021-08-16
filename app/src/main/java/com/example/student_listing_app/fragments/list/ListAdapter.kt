@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.student_listing_app.R
-import com.example.student_listing_app.data.Student
+import com.example.student_listing_app.model.Student
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
