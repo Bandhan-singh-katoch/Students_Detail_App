@@ -27,4 +27,10 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
         }
 
     }
+
+    fun updateStudent(student: Student){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updateStudent(student)
+        }
+    }
 }
