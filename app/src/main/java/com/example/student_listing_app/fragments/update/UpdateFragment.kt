@@ -1,11 +1,10 @@
 package com.example.student_listing_app.fragments.update
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -41,6 +40,9 @@ class UpdateFragment : Fragment() {
             updateItem()
         }
 
+        //Adding menu
+        setHasOptionsMenu(true)
+
         return view
     }
 
@@ -68,4 +70,26 @@ class UpdateFragment : Fragment() {
         return !(TextUtils.isEmpty(name) && TextUtils.isEmpty(course) && rollNo.isEmpty())
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.menu_delete){
+            deleteUser()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun deleteUser() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes"){_,_ ->
+            mStudentViewModel.deleteStudent(args.currentStudent)
+            Toast.makeText(requireContext(),"Removed Successfully: ${args.currentStudent.name}", Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton("No"){_,_ ->}
+        builder.setTitle("Delete ${args.currentStudent.name}?")
+        builder.setMessage("Are you sure that you want to delete ${args.currentStudent.name}?")
+        builder.create().show()
+    }
 }

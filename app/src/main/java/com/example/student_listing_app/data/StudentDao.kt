@@ -13,6 +13,12 @@ interface StudentDao {
     @Update
     suspend fun updateStudent(student:Student)
 
+    @Delete
+    suspend fun deleteStudent(student:Student)
+
+    @Query("Delete from student_table")
+    suspend fun deleteAllStudents()
+
     @Query("Select * from student_table order by id ASC")
     fun getAllData(): LiveData<List<Student>>
 }

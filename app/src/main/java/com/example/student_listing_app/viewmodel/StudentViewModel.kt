@@ -33,4 +33,16 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
             repository.updateStudent(student)
         }
     }
+
+    fun deleteStudent(student: Student){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteStudent(student)
+        }
+    }
+
+    fun deleteAllStudent(student: Student){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteAllStudent()
+        }
+    }
 }
