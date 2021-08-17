@@ -40,7 +40,7 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
         }
     }
 
-    fun deleteAllStudent(student: Student){
+    fun deleteAllStudent(){
         viewModelScope.launch(Dispatchers.IO){
             repository.deleteAllStudent()
         }
