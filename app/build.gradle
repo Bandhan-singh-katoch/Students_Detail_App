@@ -66,4 +66,7 @@ dependencies {
     implementation "androidx.room:room-ktx:2.3.0"
     androidTestImplementation "androidx.room:room-testing:2.3.0"
 
+    //cardview
+    implementation("androidx.cardview:cardview:1.0.0")
+
 }
